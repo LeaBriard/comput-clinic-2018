@@ -80,3 +80,19 @@ ggplot(data=mers, mapping=aes(x=epi.day, y=infectious.period2)) +
   labs(x='Epidemic day', y='Infectious period',
        title='MERS infectious period (positive values only) over time', 
        caption="Data from: https://github.com/rambaut/MERS-Cases/blob/gh-pages/data/cases.csv")
+
+
+library(plotly)
+mers%>% plot_ly(x = ~epi.day, y=~infectious.period2, color = ~country)
+
+
+
+##plot_ly example
+# plot_ly() tries to create a sensible plot based on the information you 
+# give it. If you don't provide a trace type, plot_ly() will infer one.
+plot_ly(economics, x = ~pop)
+plot_ly(economics, x = ~date, y = ~pop)
+# plot_ly() doesn't require data frame(s), which allows one to take 
+# advantage of trace type(s) designed specifically for numeric matrices
+plot_ly(z = ~volcano)
+plot_ly(z = ~volcano, type = "surface")
