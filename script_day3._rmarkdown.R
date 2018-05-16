@@ -1,3 +1,31 @@
+---
+title: "day3_computationalclinic"
+author: "Lea Briard"
+date: "May 16, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Statistically literate programming with R Markdown
+
+Literate programming is a programming paradigm due to Linux founder Donald Knuth in which natural
+langauge explanations of a program’s logic are interspersed with the code snippets that actually perform
+the computation. Statistically literate programming applies this paradigm to data analysis. Statistically
+literate programming is the idea that the thought process of the data analyst can be captured in a report
+that contains explanation and interpretation, the code used to perform an analysis, and the products of that
+analysis such as tables of data, quantities (e.g. p-values) and graphs.
+There are a handful of ways that one can do statistically literate programming with R/RStudio. In this
+exercise, we will use R/Markdown and knitr. Markdown is a lightweight markup language that allows
+documents to be rendered in html and other formats (e.g. pdf) with a minimum of special formatting. Knitr
+is a system for dynamic report generation in R. Both should already be installed on your computer.
+In general, a project developed with R/Markdown will consist of a markdown document (with extension
+.Rmd) and the compiled report. You should learn a little more about the functions of R/Markdown and knitr,
+but first we will engage in a little learning-by-doing.
+
+```{r cars}
 ### AUTHORS : Lea Briard
 ### DATE : 16 MAY 2018
 ### PURPOSE: project management
@@ -80,3 +108,15 @@ ggplot(data=mers, mapping=aes(x=epi.day, y=infectious.period2)) +
   labs(x='Epidemic day', y='Infectious period',
        title='MERS infectious period (positive values only) over time', 
        caption="Data from: https://github.com/rambaut/MERS-Cases/blob/gh-pages/data/cases.csv")
+
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
