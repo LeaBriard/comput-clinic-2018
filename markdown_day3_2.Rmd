@@ -2,7 +2,9 @@
 title: "rmarkdown_day3"
 author: "Lea Briard"
 date: "May 16, 2018"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}

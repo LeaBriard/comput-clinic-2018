@@ -231,7 +231,7 @@ spcor$state <- factor(spcor$state, levels=unique(spcor$state))
 myplot<-ggplot(spcor,aes(state,corr_coef))+geom_point()+
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
-ggplotly(myplot)
+
 
 ```
 
